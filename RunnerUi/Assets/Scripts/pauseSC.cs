@@ -8,6 +8,7 @@ public class pauseSC : MonoBehaviour
 {
     private bool isPause = false;
     private bool lastcheck = false;
+    public Button OptionButton;
     public GameObject background; //회색 백그라운드 전체
     public GameObject return_image;
     public GameObject exit_image;
@@ -58,7 +59,7 @@ public class pauseSC : MonoBehaviour
                     isPause = false;
                     background.SetActive(false);
                 }
-                else if (isSelected1 == 1) // 마지막 종료 확인 선택시
+                /*else if (isSelected1 == 1) // 마지막 종료 확인 선택시
                 {
                     lastcheck = true; //판정용
                     return_image.SetActive(false);
@@ -67,7 +68,7 @@ public class pauseSC : MonoBehaviour
                     second_arrow2.SetActive(true);
                     Exit_Check.SetActive(true);
                     yes_no.SetActive(true);
-                }
+                }*/
             }
         }
 
@@ -97,10 +98,10 @@ public class pauseSC : MonoBehaviour
                     Exit_Check.SetActive(false);
                     yes_no.SetActive(false);
                 }
-                else if (isSelected2 == 0) // 처음 메인 메뉴로 이동
+                /*else if (isSelected2 == 0) // 처음 메인 메뉴로 이동
                 {
                     SceneManager.LoadScene("2.MainMenu");
-                }
+                }*/
             }
         }
     }

@@ -13,8 +13,6 @@ public class BossHPbarSC : MonoBehaviour
     {
         BossHp = GetComponent<Slider>();
         BossHp.value = 0;
-        BossDetected();
-        
     }
 
     // Update is called once per frame
@@ -27,14 +25,24 @@ public class BossHPbarSC : MonoBehaviour
         //보스 hp가 0이 되면 완전히 게이지 삭제
     }
 
-    void BossDetected()
+
+    // 보스를 마주쳣을때 보스Hp 등장
+    public void BossDetected()
     {
-        while (BossHp.value < 1)
-        {
-            Invoke("BossHp.value + 0.1", 10f);
-        }
+        transform.Find("Outline").gameObject.SetActive(true);
+        InvokeRepeating("BossHPFillUp", 0.0f, 0.01f);
+        Invoke("FinishDetected", 1f);
+    }
+
+    void BossHPFillUp()
+    {
+        BossHp.value += 0.01f;
     }
 
 
+    private void FinishDetected()
+    {
+        CancelInvoke("BossHPFillUp");
+    }
 
 }
