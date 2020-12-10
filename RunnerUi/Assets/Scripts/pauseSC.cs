@@ -59,49 +59,10 @@ public class pauseSC : MonoBehaviour
                     isPause = false;
                     background.SetActive(false);
                 }
-                /*else if (isSelected1 == 1) // 마지막 종료 확인 선택시
+                else if (isSelected1 == 1) // 마지막 종료 확인 선택시
                 {
-                    lastcheck = true; //판정용
-                    return_image.SetActive(false);
-                    exit_image.SetActive(false);
-                    first_arrow2.SetActive(false);
-                    second_arrow2.SetActive(true);
-                    Exit_Check.SetActive(true);
-                    yes_no.SetActive(true);
-                }*/
-            }
-        }
-
-        else if (isPause == true && lastcheck == true) // 마지막 종료 확인 메뉴
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && isSelected2 < 1)
-            {
-                isSelected2 += 1;
-                second_arrow1.SetActive(false);
-                second_arrow2.SetActive(true);
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && isSelected2 > 0)
-            {
-                isSelected2 -= 1;
-                second_arrow1.SetActive(true);
-                second_arrow2.SetActive(false);
-            }
-            if (Input.GetKeyDown(KeyCode.Return)) // 엔터 입력시 실행
-            {
-                if (isSelected2 == 1) // 1= 아니오
-                {
-                    lastcheck = false;
-                    return_image.SetActive(true);
-                    exit_image.SetActive(true);
-                    first_arrow2.SetActive(true);
-                    second_arrow2.SetActive(false);
-                    Exit_Check.SetActive(false);
-                    yes_no.SetActive(false);
+                    SceneManager.LoadScene("MainMenu");
                 }
-                /*else if (isSelected2 == 0) // 처음 메인 메뉴로 이동
-                {
-                    SceneManager.LoadScene("2.MainMenu");
-                }*/
             }
         }
     }
