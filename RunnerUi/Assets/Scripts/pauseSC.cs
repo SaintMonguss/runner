@@ -61,6 +61,7 @@ public class pauseSC : MonoBehaviour
                 }
                 else if (isSelected1 == 1) // 마지막 종료 확인 선택시
                 {
+                    Time.timeScale = 1;
                     SceneManager.LoadScene("MainMenu");
                 }
             }

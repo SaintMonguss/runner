@@ -16,7 +16,7 @@ public class MainMenuSC : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -48,7 +48,6 @@ public class MainMenuSC : MonoBehaviour
             GameStart.gameObject.SetActive(true);
             Exit.gameObject.SetActive(true);
             ActiveOnOff(SelectMenu);
-
         }
 
         time += Time.deltaTime;
@@ -58,6 +57,7 @@ public class MainMenuSC : MonoBehaviour
         {
             SelectMenu += 1;
             ActiveOnOff(SelectMenu);
+            //Debug.Log(time);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow) && SelectMenu > 0)
         {

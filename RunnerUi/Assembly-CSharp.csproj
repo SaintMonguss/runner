@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BossHPbarSC.cs" />
     <Compile Include="Assets\Scripts\HPbarSC.cs" />
+    <Compile Include="Assets\Scripts\MainMenuSC.cs" />
     <Compile Include="Assets\Scripts\pauseSC.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/ForkIDE_Default/Runner/RunnerUi/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
